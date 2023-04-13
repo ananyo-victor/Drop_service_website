@@ -34,7 +34,13 @@
         btn.addEventListener("click", increment);
   });
   
-function side(){
-    const icon = document.getElementById('logo-sidebar');
-    icon.classList.toggle('hidden')
+function side_right(){
+    const icon = document.getElementById('right-sidebar');
+    icon.classList.toggle('translate-x-full');
+    icon.classList.toggle('-translate-x-0');
+}
+function side_left(){
+  const icon = document.getElementById('left-sidebar');
+  icon.classList.toggle('-translate-x-full');
+    icon.classList.toggle('translate-x-0');
 }

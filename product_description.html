@@ -12,11 +12,12 @@
 
 <body>
     <header class="text-gray-400 bg-gray-900 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <div class="container flex flex-wrap justify-between p-5 md:flex-row items-center">
+
             <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
                 type="button"
-                class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-                <span class="sr-only">Open sidebar</span>
+                class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                onclick="side_left()">
                 <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
                     <path clip-rule="evenodd" fill-rule="evenodd"
@@ -24,7 +25,8 @@
                     </path>
                 </svg>
             </button>
-            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+
+            <a class="flex mx-auto md:mx-0 title-font font-medium items-center text-white md:mb-0" href="index.html" >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
                     stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
                     viewBox="0 0 24 24">
@@ -32,39 +34,41 @@
                 </svg>
                 <span class="ml-3 text-xl">Moac</span>
             </a>
-            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+
+            <!-- <nav class="hidden md:ml-auto md:mr-auto md:flex flex-wrap items-center text-base justify-center">
                 <a class="mr-5 hover:text-white">First Link</a>
                 <a class="mr-5 hover:text-white">Second Link</a>
                 <a class="mr-5 hover:text-white">Third Link</a>
                 <a class="mr-5 hover:text-white">Fourth Link</a>
-            </nav>
+            </nav> -->
+<div class="flex items-center">
 
-            <button id="user_icon"
-                class="inline-flex items-center bg-gray-900 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
-                <svg class="h-8 w-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+    <button id="user_icon"
+        class="inline-flex items-center bg-gray-900 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
+        <svg class="h-8 w-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+    </button>
 
-            </button>
+    <button id="cart_icon"
+        class="inline-flex items-center bg-gray-900 border-0 py-1 px-3 mx-0 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 float-right md:mt-0"
+        onclick="side_right()">
+        <div class="relative p-2">
+            <div class="t-0 absolute left-5">
+                <p
+                    class="flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-2 text-xs text-white">
+                </p>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="file: mt-2 h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+            </svg>
+        </div>
+    </button>
 
-            <button id="cart_icon"
-                class="inline-flex items-center bg-gray-900 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
-                onclick="side()">
-                <div class="relative p-2">
-                    <div class="t-0 absolute left-3">
-                        <p
-                            class="flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-3 text-xs text-white">
-                            3
-                        </p>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="file: mt-4 h-6 w-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                    </svg>
-                </div>
-            </button>
+</div>
 
         </div>
     </header>
@@ -368,15 +372,14 @@
         </div>
     </section>
 
-    <aside id="logo-sidebar"
-        class="hidden fixed top-0 right-0 z-40 w-80 h-screen transition-transform translate-x-full sm:-translate-x-0"
+    <aside id="right-sidebar" class="fixed top-0 right-0 z-40 w-80 h-screen transition-transform translate-x-full duration-1000"
         aria-label="Sidebar">
         <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
             <a href="" class="flex items-center pl-2.5 mb-5 text-gray-300 justify-between">
                 <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Cart</span>
                 <button
                     class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
-                    onclick="side()">
+                    onclick="side_right()">
                     <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
                         <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -432,8 +435,35 @@
                             Rs 0</div>
                     </div>
                 </div>
-                <div class="flex justify-center pb-3"><button class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Button</button></div>
+                <div class="flex justify-center pb-3"><button
+                        class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Button</button>
+                </div>
             </section>
+        </div>
+    </aside>
+
+    <aside id="left-sidebar"
+        class="fixed top-0 left-0 z-40 w-80 h-screen transition-transform duration-700 -translate-x-full"
+        aria-label="Sidebar">
+        <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+            <a href="" class="flex items-center pl-2.5 mb-5 text-gray-300 justify-between">
+
+                <button
+                    class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
+                    onclick="side_left()">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+                    </svg>
+
+                </button>
+
+            </a>
+
+
+
         </div>
     </aside>
 
