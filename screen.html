@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Screen Size Example</title>
+	<script>
+		// Get the width and height of the screen
+		var screenWidth = window.screen.width;
+		var screenHeight = window.screen.height;
+
+		// Set the content of the screen size element
+		window.onload = function() {
+			var screenSizeElement = document.getElementById("screen-size");
+			screenSizeElement.innerHTML = "Screen width: " + screenWidth + "<br>" + "Screen height: " + screenHeight;
+		};
+	</script>
+</head>
+<body>
+	<h1>Screen Size Example</h1>
+	<p id="screen-size"></p>
+</body>
+</html>
