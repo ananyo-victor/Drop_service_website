@@ -44,81 +44,68 @@
         </button>
 
         <!-- Dropdown menu -->
-        <div id="Dropdown_menu"
-          class="hidden absolute z-20 w-full py-2  origin-top-right bg-white rounded-md shadow-xl dark:bg-gray-800">
-          <div class="flex justify-evenly items-center space-x-4">
-            <div class="relative hover:bg-slate-700 aspect-square h-32">
-              <img src="product-image.jpg" alt="Product Image" class="w-full">
-              <div
-                class="absolute top-0 right-0 bg-gray-900 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
-                2</div>
+        <div id="Dropdown_menu" class="hidden absolute z-20 w-full origin-top-right rounded-md bg-white py-2 shadow-xl dark:bg-gray-800">
+          <div class="flex items-center justify-evenly space-x-4">
+            <div class="relative aspect-square h-16 hover:bg-slate-700">
+              <img src="product-image.jpg" alt="Product Image" class="w-full" />
+              <div class="absolute right-0 top-0 flex h-8 w-8 items-center justify-center rounded-full bg-gray-900 text-sm font-bold text-white">2</div>
             </div>
             <div class="px-5">
-              <p class="text-gray-700 mb-4 font-bold text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
+              <p class="mb-4 text-sm font-semibold text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
             <div class="px-5">
-              <p class="font-bold text-2xl text-green-600">$99.99</p>
+              <p class="text-lg font-bold text-green-600">$99.99</p>
             </div>
-
           </div>
-
-          <div class="flex items-center space-x-4 mb-5">
-            <input type="text" placeholder="Enter coupon code"
-              class="border-gray-400 border-2 rounded-md px-4 py-2 w-2/3 mx-auto">
-            <button
-              class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors duration-300 mx-auto">Check
-              coupon</button>
+  
+          <div class="mb-5 flex items-center space-x-4">
+            <input type="text" placeholder="Enter coupon code" class="mx-auto w-4/5 rounded-md border-2 border-gray-400 px-4 py-2" />
+            <button class="mx-auto w-1/5 rounded-md bg-green-600 px-4 py-2 text-white transition-colors duration-300 hover:bg-green-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
-
-          <div>
-
-            <span class="px-4 py-2 mx-2 text-base rounded-full text-white  bg-green-500 ">
-              Hello
-              <button class="bg-transparent" onclick="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="ml-4"
-                  viewBox="0 0 1792 1792">
-                  <path
-                    d="M1490 1322q0 40-28 68l-136 136q-28 28-68 28t-68-28l-294-294-294 294q-28 28-68 28t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68l-294 294 294 294q28 28 28 68z">
-                  </path>
+  
+          <div class="w-full bg-slate-700 flex flex-wrap">
+            <span class="bg-green-600 text-white px-4 py-2 rounded-full mx-2 my-2 ">hello
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="ml-4" viewBox="0 0 1792 1792">
+                  <path d="M1490 1322q0 40-28 68l-136 136q-28 28-68 28t-68-28l-294-294-294 294q-28 28-68 28t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68l-294 294 294 294q28 28 28 68z"></path>
                 </svg>
               </button>
             </span>
-
-            <span class="px-4 py-2 mx-2 text-base rounded-full text-white  bg-indigo-500 ">
-              Hello
-              <button class="bg-transparent hover">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="ml-4"
-                  viewBox="0 0 1792 1792">
-                  <path
-                    d="M1490 1322q0 40-28 68l-136 136q-28 28-68 28t-68-28l-294-294-294 294q-28 28-68 28t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68l-294 294 294 294q28 28 28 68z">
-                  </path>
+            <span class="bg-green-600 text-white px-4 py-2 rounded-full mx-2 my-2 ">hello
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="ml-4" viewBox="0 0 1792 1792">
+                  <path d="M1490 1322q0 40-28 68l-136 136q-28 28-68 28t-68-28l-294-294-294 294q-28 28-68 28t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68l-294 294 294 294q28 28 28 68z"></path>
                 </svg>
               </button>
             </span>
-
-            <span class="px-4 py-2 mx-2 text-base rounded-full text-white  bg-indigo-500 ">
-              Hello
-              <button class="bg-transparent hover">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="ml-4"
-                  viewBox="0 0 1792 1792">
-                  <path
-                    d="M1490 1322q0 40-28 68l-136 136q-28 28-68 28t-68-28l-294-294-294 294q-28 28-68 28t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68l-294 294 294 294q28 28 28 68z">
-                  </path>
+            <span class="bg-green-600 text-white px-4 py-2 rounded-full mx-2 my-2 ">hello
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="ml-4" viewBox="0 0 1792 1792">
+                  <path d="M1490 1322q0 40-28 68l-136 136q-28 28-68 28t-68-28l-294-294-294 294q-28 28-68 28t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68l-294 294 294 294q28 28 28 68z"></path>
                 </svg>
               </button>
             </span>
-
+            <span class="bg-green-600 text-white px-4 py-2 rounded-full mx-2 my-2 ">hello
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="ml-4" viewBox="0 0 1792 1792">
+                  <path d="M1490 1322q0 40-28 68l-136 136q-28 28-68 28t-68-28l-294-294-294 294q-28 28-68 28t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68l-294 294 294 294q28 28 28 68z"></path>
+                </svg>
+              </button>
+            </span>                              
           </div>
-
-          <section class="w-full mt-10">
-            <div class="flex justify-between w-full px-3">
-              <p class="text-xl text-gray-800 dark:text-white font-bold">Sub Total</p>
-              <p class="text-xl text-gray-800 dark:text-white font-semibold">Rs. 00</p>
+  
+          <section class="mt-10 w-full">
+            <div class="flex w-full justify-between px-3">
+              <p class="text-base font-semibold text-gray-800 dark:text-white">Sub Total</p>
+              <p class="text-base font-semibold text-gray-800 dark:text-white">Rs. 00</p>
             </div>
-            <div class="flex justify-between w-full px-3">
-              <p class="text-xl text-gray-800 dark:text-white font-bold">Total</p>
-              <p class="text-xl text-gray-800 dark:text-white font-semibold">Rs. 00</p>
+            <div class="flex w-full justify-between px-3">
+              <p class="text-base font-semibold text-gray-800 dark:text-white">Total</p>
+              <p class="text-base font-semibold text-gray-800 dark:text-white">Rs. 00</p>
             </div>
             <div></div>
           </section>
