@@ -1,39 +1,21 @@
-    function decrement(e) {
-    const btn = e.target.parentNode.parentElement.querySelector(
-    'button[data-action="decrement"]'
-    );
-    const target = btn.nextElementSibling;
-    let value = Number(target.value);
-    value--;
-    target.value = value;
-  }
-
-    function increment(e) {
-    const btn = e.target.parentNode.parentElement.querySelector(
-    'button[data-action="decrement"]'
-    );
-    const target = btn.nextElementSibling;
-    let value = Number(target.value);
-    value++;
-    target.value = value;
-  }
-
-    const decrementButtons = document.querySelectorAll(
-    `button[data-action="decrement"]`
-    );
-
-    const incrementButtons = document.querySelectorAll(
-    `button[data-action="increment"]`
-    );
-
-  decrementButtons.forEach(btn => {
-        btn.addEventListener("click", decrement);
-  });
-
-  incrementButtons.forEach(btn => {
-        btn.addEventListener("click", increment);
-  });
   
+  function increment(e) {
+    var input = document.getElementById(e);
+    input.value = parseInt(input.value) + 1;
+  }
+  
+  function decrement(e) {
+    var input = document.getElementById(e);
+    if (parseInt(input.value) > 0) {
+      input.value = parseInt(input.value) - 1;
+    }
+  }
+  
+function remove(e){
+  const btn = document.getElementById(e);
+  btn.classList.add('hidden');
+}
+
 function side_right(){
     const icon = document.getElementById('right-sidebar');
     icon.classList.toggle('translate-x-full');

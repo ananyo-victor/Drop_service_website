@@ -45,10 +45,10 @@
 
         <button id="user_icon"
           class="inline-flex items-center bg-gray-900 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
-          <svg class="h-8 w-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <a href="sign_in.html"><svg class="h-8 w-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
+          </svg></a>
         </button>
 
         <button id="cart_icon"
@@ -72,11 +72,11 @@
     </div>
   </header>
 
-  <aside id="right-sidebar"
+  <aside id="right-sidebar" id="Product1aside"
     class="fixed top-0 right-0 z-40 w-80 h-screen transition-transform translate-x-full duration-1000"
     aria-label="Sidebar">
     <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-      <a href="" class="flex items-center pl-2.5 mb-5 text-gray-300 justify-between">
+      <a href="#" class="flex items-center pl-2.5 mb-5 text-gray-300 justify-between">
         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Cart</span>
         <button
           class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
@@ -103,14 +103,14 @@
             <div class="relative custom-number-input h-10 w-32">
               <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
 
-                <button data-action="decrement"
+                <button data-action="decrement" onclick="decrement('myInput')"
                   class=" bg-gray-800 text-gray-500 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
                   <span class="m-auto text-2xl font-thin">-</span>
                 </button>
-                <input type="number"
+                <input type="number" id="myInput"
                   class="focus:outline-none text-center w-full bg-gray-800 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-500  outline-none"
                   name="custom-input-number" value="0"></input>
-                <button data-action="increment"
+                <button data-action="increment" onclick="increment('myInput')"
                   class="bg-gray-800 text-gray-500 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
                   <span class="m-auto text-2xl font-thin">+</span>
                 </button>
@@ -121,7 +121,7 @@
           </div>
 
           <button
-            class="flex mx-auto text-white bg-green-500 border-0 mt-5 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">Remove
+            class="flex mx-auto text-white bg-green-500 border-0 mt-5 py-2 px-6 focus:outline-none hover:bg-green-600 rounded" onclick="remove('Product1aside')">Remove
             from Cart</button>
 
         </div>
@@ -148,7 +148,7 @@
     class="fixed top-0 left-0 z-40 w-80 h-screen transition-transform duration-700 -translate-x-full"
     aria-label="Sidebar">
     <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-      <a href="" class="flex items-center pl-2.5 mb-5 text-gray-300 justify-between">
+      <a href="#" class="flex items-center pl-2.5 mb-5 text-gray-300 justify-between">
 
         <button
           class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
